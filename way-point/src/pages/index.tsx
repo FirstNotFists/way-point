@@ -1,16 +1,17 @@
-import { createRoute } from '@granite-js/react-native';
 import React from 'react';
-import { View, Text, TouchableOpacity } from 'react-native';
+import { View } from 'react-native';
 import { styles } from './style';
+import { createRoute } from '@granite-js/react-native';
+import CommonButton from '../components/ui/button/Button';
 
 export const Route = createRoute('/', {
-	component: Page,
+	component: MainPage,
 	screenOptions: {
 		headerShown: false,
 	},
 });
 
-function Page() {
+export default function MainPage() {
 	const navigation = Route.useNavigation();
 
 	const goToAboutPage = () => {
@@ -19,9 +20,7 @@ function Page() {
 
 	return (
 		<View style={styles.container}>
-			<TouchableOpacity style={styles.button} onPress={goToAboutPage}>
-				<Text style={styles.buttonText}>Go to About Page</Text>
-			</TouchableOpacity>
+			<CommonButton label="버튼명" onPress={goToAboutPage} fontStyle="Bold" />
 		</View>
 	);
 }
