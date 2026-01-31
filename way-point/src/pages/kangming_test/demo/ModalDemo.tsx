@@ -1,7 +1,7 @@
 import { createRoute } from '@granite-js/react-native';
 import React, { useState } from 'react';
 import { StyleSheet, View, Text, TouchableOpacity } from 'react-native';
-import CommonModal from '../../components/ui/CommonModal';
+import CommonModal from '../../../components/ui/CommonModal';
 
 export const Route = createRoute('/demo/modal', {
 	component: ModalDemo,
@@ -14,13 +14,22 @@ function ModalDemo() {
 
 	return (
 		<View style={styles.container}>
-			<TouchableOpacity style={styles.button} onPress={() => setModalVisible1(true)}>
+			<TouchableOpacity
+				style={styles.button}
+				onPress={() => setModalVisible1(true)}
+			>
 				<Text style={styles.buttonText}>Show Standard Modal</Text>
 			</TouchableOpacity>
-			<TouchableOpacity style={styles.button} onPress={() => setModalVisible2(true)}>
+			<TouchableOpacity
+				style={styles.button}
+				onPress={() => setModalVisible2(true)}
+			>
 				<Text style={styles.buttonText}>Show Alert Modal</Text>
 			</TouchableOpacity>
-			<TouchableOpacity style={styles.button} onPress={() => setModalVisible3(true)}>
+			<TouchableOpacity
+				style={styles.button}
+				onPress={() => setModalVisible3(true)}
+			>
 				<Text style={styles.buttonText}>Show Flexible Content Modal</Text>
 			</TouchableOpacity>
 
@@ -40,7 +49,10 @@ function ModalDemo() {
 				<Text>This is an alert modal.</Text>
 			</CommonModal>
 
-			<CommonModal visible={modalVisible3} onClose={() => setModalVisible3(false)}>
+			<CommonModal
+				visible={modalVisible3}
+				onClose={() => setModalVisible3(false)}
+			>
 				<Text>This is a modal with flexible content.</Text>
 				<Text>You can add more content here.</Text>
 			</CommonModal>
@@ -49,24 +61,24 @@ function ModalDemo() {
 }
 
 const styles = StyleSheet.create({
-	container: {
-		flex: 1,
-		justifyContent: 'center',
-		alignItems: 'center',
-		padding: 16,
-		backgroundColor: '#F5F5F5',
-	},
 	button: {
+		alignItems: 'center',
 		backgroundColor: '#0064FF',
-		paddingVertical: 12,
-		paddingHorizontal: 24,
 		borderRadius: 8,
 		marginBottom: 16,
+		paddingHorizontal: 24,
+		paddingVertical: 12,
 		width: '100%',
-		alignItems: 'center',
 	},
 	buttonText: {
 		color: 'white',
 		fontWeight: 'bold',
+	},
+	container: {
+		alignItems: 'center',
+		backgroundColor: '#F5F5F5',
+		flex: 1,
+		justifyContent: 'center',
+		padding: 16,
 	},
 });

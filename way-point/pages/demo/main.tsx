@@ -1,1 +1,1 @@
-export { Route } from 'pages/demo/MainDemo';
+export { Route } from 'pages/kangming_test/demo/MainDemo';

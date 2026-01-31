@@ -1,7 +1,7 @@
 import { createRoute } from '@granite-js/react-native';
 import React from 'react';
 import { StyleSheet, ScrollView } from 'react-native';
-import CommonInput from '../../components/ui/CommonInput';
+import CommonInput from '../../../components/ui/CommonInput';
 
 export const Route = createRoute('/demo/input', {
 	component: InputDemo,
@@ -17,18 +17,15 @@ function InputDemo() {
 				placeholder="Enter text"
 				error="This is an error message"
 			/>
-			<CommonInput
-				placeholder="Password Input"
-				secureTextEntry
-			/>
+			<CommonInput placeholder="Password Input" secureTextEntry />
 		</ScrollView>
 	);
 }
 
 const styles = StyleSheet.create({
 	container: {
+		backgroundColor: '#F5F5F5',
 		flex: 1,
 		padding: 16,
-		backgroundColor: '#F5F5F5',
 	},
 });

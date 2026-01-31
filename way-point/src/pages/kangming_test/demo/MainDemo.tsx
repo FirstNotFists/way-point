@@ -1,9 +1,9 @@
 import { createRoute } from '@granite-js/react-native';
 import React from 'react';
 import { StyleSheet, View, ScrollView, Text } from 'react-native';
-import WideCarousel from '../../components/ui/WideCarousel';
-import Callout from '../../components/ui/Callout';
-import CardCarousel from '../../components/ui/CardCarousel';
+import WideCarousel from '../../../components/ui/WideCarousel';
+import Callout from '../../../components/ui/Callout';
+import CardCarousel from '../../../components/ui/CardCarousel';
 
 export const Route = createRoute('/demo/main', {
 	component: MainDemo,
@@ -40,18 +40,24 @@ function MainDemo() {
 		},
 	];
 
-	const renderWideCarouselItem = (
-		item: { id: string; title: string; description: string; image: string }
-	) => (
+	const renderWideCarouselItem = (item: {
+		id: string;
+		title: string;
+		description: string;
+		image: string;
+	}) => (
 		<View style={styles.wideCarouselItem}>
 			<Text style={styles.title}>{item.title}</Text>
 			<Text style={styles.description}>{item.description}</Text>
 		</View>
 	);
 
-	const renderCardCarouselItem = (
-		item: { id: string; title: string; description: string; image: string }
-	) => (
+	const renderCardCarouselItem = (item: {
+		id: string;
+		title: string;
+		description: string;
+		image: string;
+	}) => (
 		<View style={styles.cardCarouselItem}>
 			<Text style={styles.title}>{item.title}</Text>
 			<Text style={styles.description}>{item.description}</Text>
@@ -74,7 +80,7 @@ function MainDemo() {
 			/>
 		</ScrollView>
 	);
-};
+}
 
 const styles = StyleSheet.create({
 	cardCarouselItem: {
