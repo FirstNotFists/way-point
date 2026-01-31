@@ -1,7 +1,7 @@
 import { createRoute } from '@granite-js/react-native';
 import React from 'react';
 import { StyleSheet, ScrollView } from 'react-native';
-import CommonInput from '../../components/CommonInput';
+import CommonInput from '../../components/ui/CommonInput';
 
 export const Route = createRoute('/demo/input', {
 	component: InputDemo,

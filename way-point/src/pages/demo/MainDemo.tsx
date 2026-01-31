@@ -1,9 +1,9 @@
 import { createRoute } from '@granite-js/react-native';
 import React from 'react';
 import { StyleSheet, View, ScrollView, Text } from 'react-native';
-import WideCarousel from '../../components/WideCarousel';
-import Callout from '../../components/Callout';
-import CardCarousel from '../../components/CardCarousel';
+import WideCarousel from '../../components/ui/WideCarousel';
+import Callout from '../../components/ui/Callout';
+import CardCarousel from '../../components/ui/CardCarousel';
 
 export const Route = createRoute('/demo/main', {
 	component: MainDemo,

@@ -1,6 +1,6 @@
 import React from 'react';
 import { render } from '@testing-library/react-native';
-import CardCarousel from '../CardCarousel';
+import CardCarousel from '../ui/CardCarousel';
 
 describe('CardCarousel', () => {
 	it('renders without crashing', () => {

@@ -1,6 +1,6 @@
 import React from 'react';
 import { render } from '@testing-library/react-native';
-import ContentGrid from '../ContentGrid';
+import ContentGrid from '../ui/ContentGrid';
 import { Text } from 'react-native';
 
 describe('ContentGrid', () => {

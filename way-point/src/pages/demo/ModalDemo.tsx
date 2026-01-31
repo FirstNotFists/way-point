@@ -1,7 +1,7 @@
 import { createRoute } from '@granite-js/react-native';
 import React, { useState } from 'react';
 import { StyleSheet, View, Text, TouchableOpacity } from 'react-native';
-import CommonModal from '../../components/CommonModal';
+import CommonModal from '../../components/ui/CommonModal';
 
 export const Route = createRoute('/demo/modal', {
 	component: ModalDemo,
