@@ -1,7 +1,8 @@
 import React from 'react';
 import { Animated, Text, View } from 'react-native';
-import { useSplash } from './hooks/useSplash';
+
 import { styles } from './style';
+import useSplash from './hooks/useSplash';
 
 export default function Splash() {
 	const { fadeAnim, splashVisible } = useSplash();
@@ -14,7 +15,7 @@ export default function Splash() {
 			pointerEvents="none"
 		>
 			<View style={styles.splashContent}>
-				<Text style={styles.splashTitle}>Way Point</Text>
+				<Text style={styles.splashTitle}>LOGO</Text>
 			</View>
 		</Animated.View>
 	);

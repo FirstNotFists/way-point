@@ -4,7 +4,7 @@ import { Animated } from 'react-native';
 const SPLASH_DURATION_MS = 1500;
 const FADE_OUT_DURATION_MS = 300;
 
-export function useSplash() {
+const useSplash = () => {
 	const [splashVisible, setSplashVisible] = useState(true);
 	const fadeAnim = useRef(new Animated.Value(1)).current;
 
@@ -21,4 +21,6 @@ export function useSplash() {
 	}, [fadeAnim]);
 
 	return { fadeAnim, splashVisible };
-}
+};
+
+export default useSplash;
